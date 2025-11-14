@@ -29,7 +29,8 @@ export default function Header() {
           <div className="flex items-center gap-3">
             <Image 
               src="/assets/jastute-logo.png" 
-              alt="JASTUTE Solutions Logo" 
+              alt="JASTUTE Solutions Logo"
+              priority={true}
               width={80}
               height={48}
               className="h-12 2xl:h-20 w-auto"

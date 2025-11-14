@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Image from 'next/image';
+import OptimizedImage from '@/components/OptimizedImage';
 
 export default function Portfolio() {
   const [currentProject, setCurrentProject] = useState(0);
@@ -95,10 +95,9 @@ export default function Portfolio() {
               {/* Project Image */}
               <div className="lg:w-1/2">
                 <div className="aspect-auto rounded-3xl overflow-hidden shadow-2xl">
-                  <Image 
+                  <OptimizedImage 
                     src={projects[currentProject].image}
                     alt={projects[currentProject].title}
-                    loading='lazy'
                     width={projects[currentProject].width}
                     height={projects[currentProject].height}
                     className="w-full h-full object-cover"

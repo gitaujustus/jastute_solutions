@@ -1,7 +1,7 @@
 'use client';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
+import OptimizedImage from '@/components/OptimizedImage';
 import dynamic from 'next/dynamic';
 
 // Load animated background after initial paint to avoid blocking the main bundle.
@@ -115,7 +115,7 @@ export default function HeroSection() {
                 transition={{ duration: 0.5 }}
               >
                 <div className="sm:aspect-video lg:aspect-square bg-gray-100 rounded-2xl flex items-center justify-center overflow-hidden">
-                  <Image 
+                  <OptimizedImage 
                     src={portfolioImages[currentSlide].webp} 
                     alt={`Project ${currentSlide + 1}`}
                     width={portfolioImages[currentSlide].width}

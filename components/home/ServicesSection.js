@@ -1,7 +1,7 @@
 'use client';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Image from 'next/image';
+import OptimizedImage from '@/components/OptimizedImage';
 import { backgrounds } from '../backgrounds';
 
 export default function ServicesSection() {
@@ -81,10 +81,9 @@ export default function ServicesSection() {
                 whileHover={{ y: -8 }}
               >
                 <div className="aspect-video overflow-hidden">
-                  <Image 
+                  <OptimizedImage 
                     src={service.image} 
                     alt={service.title}
-                      // loading="lazy"
                     priority={index === 0}
                     width={service.width}
                     height={service.height}

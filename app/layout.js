@@ -36,11 +36,12 @@ export const metadata = {
   openGraph: {
     title: "JASTUTE Solutions - Digital Design & Development Agency",
     description: "Leading digital design and development agency in Kenya. We help brands stand out through innovative digital solutions.",
-    url: 'https://jastutesolutions.co.ke',
+    url: 'https://jastutesolutions.com',
     siteName: 'JASTUTE Solutions',
     images: [
       {
-        url: '/Assets/jastute-logo.png',
+        // Use the webp logo from public assets (lowercase path). Use metadataBase for absolute URL generation.
+        url: '/assets/webp/jastute-logo.webp',
         width: 1200,
         height: 630,
         alt: 'JASTUTE Solutions Logo',
@@ -53,7 +54,8 @@ export const metadata = {
     card: 'summary_large_image',
     title: "JASTUTE Solutions - Digital Design & Development",
     description: "Leading digital design and development agency in Kenya. Attract. Impact. Grow.",
-    images: ['/Assets/jastute-logo.png'],
+  // Twitter expects an absolute URL or a path resolvable from the site root
+  images: ['/assets/webp/jastute-logo.webp'],
   },
   robots: {
     index: true,
@@ -72,7 +74,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <link rel="icon" href="/Assets/jastute-logo.png" />
+        <link rel="icon" href="/assets/jastute-logo.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#063837" />
         <link rel="preload" href="/assets/webp/hero1.webp" as="image" type="image/webp" />
