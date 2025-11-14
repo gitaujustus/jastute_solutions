@@ -17,10 +17,10 @@ export default function JourneySection() {
           >
             <div className="relative">
               <Image 
-                src="/Assets/ourjourney1.jpeg" 
+                src="/assets/webp/ourjourney1.webp" 
                 alt="Our Journey" 
-                width={400}
-                height={300}
+                width={736}
+                height={734}
                 className="w-full max-w-md rounded-3xl shadow-lg object-cover"
               />
               <div className="absolute -bottom-4 -left-4 w-20 h-20 bg-[#FCB043] rounded-full opacity-70"></div>

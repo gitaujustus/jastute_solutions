@@ -9,32 +9,44 @@ export default function ServicesSection() {
     {
       title: "Website Redesign",
       description: "Transform your existing website into a modern, fast-loading digital experience that converts visitors into customers.",
-      image: "/Assets/Services/Website Redesign.jpeg"
+      image: "/assets/webp/Website Redesign.webp",
+      width: 736,
+      height: 560
     },
     {
       title: "Web Development",
       description: "Custom websites built with clean code, optimized performance, and scalable architecture for your business growth.",
-      image: "/Assets/Services/Web Development.jpeg"
+      image: "/assets/webp/Web Development.webp",
+      width: 736,
+      height: 515
     },
     {
       title: "Web Solutions",
       description: "Complete digital solutions including POS systems, CRM platforms, and custom web applications tailored to your needs.",
-      image: "/Assets/Services/Web Solutions.jpeg"
+      image: "/assets/webp/Web Solutions.webp",
+      width: 735,
+      height: 562
     },
     {
       title: "Web Hosting",
       description: "Reliable hosting services with domain registration, SSL certificates, and ongoing technical support for your website.",
-      image: "/Assets/Services/Web Hosting.jpeg"
+      image: "/assets/webp/Web Hosting.webp",
+      width: 626,
+      height: 418
     },
     {
       title: "Branding",
       description: "Complete brand identity design including logos, brand guidelines, and marketing materials that make lasting impressions.",
-      image: "/Assets/Services/Branding.jpg"
+      image: "/assets/webp/Branding.webp",
+      width: 4955,
+      height: 4912
     },
     {
       title: "CV & Profile Design",
       description: "Professional resume and portfolio designs that showcase your expertise and help you stand out to employers.",
-      image: "/Assets/Services/Resume Writing.jpeg"
+      image: "/assets/webp/Resume Writing.webp",
+      width: 735,
+      height: 480
     }
   ];
 
@@ -72,8 +84,10 @@ export default function ServicesSection() {
                   <Image 
                     src={service.image} 
                     alt={service.title}
-                    width={400}
-                    height={250}
+                      // loading="lazy"
+                    priority={index === 0}
+                    width={service.width}
+                    height={service.height}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>

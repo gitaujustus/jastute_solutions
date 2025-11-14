@@ -27,10 +27,10 @@ export default function MissionVisionSection() {
           >
             <div className="relative">
               <Image 
-                src="/Assets/Mission-vision.jpg" 
+                src="/assets/webp/Mission-vision.webp" 
                 alt="Mission and Vision" 
-                width={500}
-                height={400}
+                width={736}
+                height={414}
                 className="w-full rounded-3xl shadow-lg object-cover"
               />
               <div className="absolute -bottom-4 -right-4 w-16 h-16 bg-[#FCB043] rounded-full opacity-70"></div>

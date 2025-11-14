@@ -8,17 +8,16 @@ export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const portfolioImages = [
-    // '/Assets/hero1.jpg',
-    '/Assets/hero1.png',
-    '/Assets/hero3.jpeg',
-    '/Assets/hero4.jpeg',
-    '/Assets/Bdevelopment.jpeg',
+    { webp: '/assets/webp/hero1.webp', width: 1024, height: 1024 },
+    { webp: '/assets/webp/hero3.webp', width: 626, height: 417 },
+    { webp: '/assets/webp/hero4.webp', width: 339, height: 508 },
+    { webp: '/assets/webp/Bdevelopment.webp', width: 736, height: 552 },
   ];
 
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % portfolioImages.length);
-    }, 3000);
+    }, 6000);
     return () => clearInterval(timer);
   }, [portfolioImages.length]);
 
@@ -27,8 +26,6 @@ export default function HeroSection() {
       <AnimatedBackground />
       
       <div className="max-w-7xl mx-auto w-full relative z-10">
-
-        
         <motion.div 
           className="flex justify-start pb-7"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -55,7 +52,7 @@ export default function HeroSection() {
               transition={{ delay: 0.2, duration: 0.8 }}
             >
               We help brands stand out through {' '}
-              <span className="text-[#FCB043]">smart digital solutions</span>{' '}
+              <span className="text-[#FCB043]">smart digital solutions.</span>{' '}
             </motion.h1>
             
             <motion.p 
@@ -114,10 +111,11 @@ export default function HeroSection() {
               >
                 <div className="sm:aspect-video lg:aspect-square bg-gray-100 rounded-2xl flex items-center justify-center overflow-hidden">
                   <Image 
-                    src={portfolioImages[currentSlide]} 
+                    src={portfolioImages[currentSlide].webp} 
                     alt={`Project ${currentSlide + 1}`}
-                    width={400}
-                    height={300}
+                    width={portfolioImages[currentSlide].width}
+                    height={portfolioImages[currentSlide].height}
+                    priority={currentSlide === 0}
                     className="w-full h-full object-cover object-top rounded-2xl"
                   />
                 </div>

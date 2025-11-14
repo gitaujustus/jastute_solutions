@@ -13,28 +13,34 @@ export default function Portfolio() {
       description: "A farm brand solution built to promote chick supply and poultry services. Minimal design with strong product visuals and mobile-friendly performance.",
       tag: "Agribusiness Website",
       link: "https://hillganinnovations.co.ke",
-      image: "/Assets/Kibunja-farm.png"
+      image: "/assets/webp/Kibunja-farm.webp",
+      width: 1344,
+      height: 768
     },
     // {
     //   title: "Centri Closet",
     //   description: "E-commerce platform serving Baraton University community. Clean UI with categorized product listings and integrated order flow.",
     //   tag: "E-Commerce Platform",
     //   link: "https://centricloset.vercel.app",
-    //   image: "/Assets/healjuction-website.png"
+    //   image: "/assets/webp/healjuction-website.webp"
     // },
     {
       title: "HealJunction",
       description: "Healthcare and wellness management platform designed to simplify patient engagement and appointment booking. Smooth dashboard and responsive user flow.",
       tag: "Health Platform",
       link: "https://healjunction.vercel.app",
-      image: "/Assets/healjuction-website.png"
+      image: "/assets/webp/healjuction-website.webp",
+      width: 1248,
+      height: 832
     },
     {
       title: "Healthcare Service Platform",
       description: "A clean, user-focused platform for managing healthcare services and client engagement.",
       tag: "Healthcare Platform",
       link: "#",
-      image: "/Assets/Kaziafya.png"
+      image: "/assets/webp/Kaziafya.webp",
+      width: 1184,
+      height: 864
     }
   ];
 
@@ -92,8 +98,9 @@ export default function Portfolio() {
                   <Image 
                     src={projects[currentProject].image}
                     alt={projects[currentProject].title}
-                    width={600}
-                    height={400}
+                    loading='lazy'
+                    width={projects[currentProject].width}
+                    height={projects[currentProject].height}
                     className="w-full h-full object-cover"
                   />
                 </div>

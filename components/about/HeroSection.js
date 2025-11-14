@@ -1,5 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import AboutAnimatedBackground from './AboutAnimatedBackground';
 
 export default function HeroSection() {
@@ -42,9 +43,11 @@ export default function HeroSection() {
             transition={{ duration: 0.8, delay: 0.2 }}
           >
             <div className="relative">
-              <img 
-                src="/Assets/aboutUS.jpeg" 
+              <Image 
+                src="/assets/webp/aboutUS.webp" 
                 alt="JASTUTE Solutions" 
+                width={626}
+                height={626}
                 className="w-full max-w-md rounded-3xl shadow-lg object-cover"
               />
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-[#FCB043] rounded-full opacity-80"></div>
