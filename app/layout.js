@@ -29,19 +29,21 @@ export const metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://jastutesolutions.com'),
+  // Use the staging Vercel URL as the metadata base so crawlers fetching the staging site
+  // receive absolute URLs that resolve on the same host.
+  metadataBase: new URL('https://jastutesolution.vercel.app'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: "JASTUTE Solutions - Digital Design & Development Agency",
     description: "Leading digital design and development agency in Kenya. We help brands stand out through innovative digital solutions.",
-    url: 'https://jastutesolutions.com',
+  url: 'https://jastutesolution.vercel.app',
     siteName: 'JASTUTE Solutions',
     images: [
       {
-        // Use the Thumbnail image for social preview
-        url: '/assets/Thumbnail.png',
+  // Use the Thumbnail image for social preview (absolute URL on the staging host)
+  url: 'https://jastutesolution.vercel.app/assets/Thumbnail.png',
         width: 1200,
         height: 630,
         alt: 'JASTUTE Solutions - Attract. Impact. Grow.',
@@ -54,8 +56,8 @@ export const metadata = {
     card: 'summary_large_image',
     title: "JASTUTE Solutions - Digital Design & Development",
     description: "Leading digital design and development agency in Kenya. Attract. Impact. Grow.",
-    // Twitter expects an absolute URL or a path resolvable from the site root
-    images: ['/assets/Thumbnail.png'],
+  // Twitter expects an absolute URL or a path resolvable from the site root
+  images: ['https://jastutesolution.vercel.app/assets/Thumbnail.png'],
   },
   robots: {
     index: true,
