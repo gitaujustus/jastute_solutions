@@ -40,11 +40,11 @@ export const metadata = {
     siteName: 'JASTUTE Solutions',
     images: [
       {
-        // Use the webp logo from public assets (lowercase path). Use metadataBase for absolute URL generation.
-        url: '/assets/webp/jastute-logo.webp',
+        // Use the Thumbnail image for social preview
+        url: '/assets/Thumbnail.png',
         width: 1200,
         height: 630,
-        alt: 'JASTUTE Solutions Logo',
+        alt: 'JASTUTE Solutions - Attract. Impact. Grow.',
       },
     ],
     locale: 'en_US',
@@ -54,8 +54,8 @@ export const metadata = {
     card: 'summary_large_image',
     title: "JASTUTE Solutions - Digital Design & Development",
     description: "Leading digital design and development agency in Kenya. Attract. Impact. Grow.",
-  // Twitter expects an absolute URL or a path resolvable from the site root
-  images: ['/assets/webp/jastute-logo.webp'],
+    // Twitter expects an absolute URL or a path resolvable from the site root
+    images: ['/assets/Thumbnail.png'],
   },
   robots: {
     index: true,
