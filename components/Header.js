@@ -39,7 +39,7 @@ export default function Header() {
             transition={{ delay: 0.2, duration: 0.5 }}
           >
             <Image 
-              src="/Assets/jastute-logo.png" 
+              src="/assets/jastute-logo.png" 
               alt="JASTUTE Solutions Logo" 
               width={80}
               height={48}

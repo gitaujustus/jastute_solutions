@@ -12,7 +12,7 @@ export default function Footer() {
           <div className="lg:col-span-2 space-y-6">
             <div className="flex items-center gap-3 mb-6">
               <Image 
-                src="/Assets/Jastute-logo-for-dark-bg.png" 
+                src="/assets/Jastute-logo-for-dark-bg.png" 
                 alt="JASTUTE Solutions Logo" 
                 width={120}
                 height={80}

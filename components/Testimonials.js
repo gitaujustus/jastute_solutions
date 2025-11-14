@@ -587,28 +587,36 @@ export default function Testimonials() {
       position: "CEO, TechStart Solutions",
       company: "TechStart Solutions",
       testimonial: "JASTUTE Solutions transformed our digital presence completely. Their attention to detail and innovative approach helped us increase our online engagement by 300%.",
-      avatar: "/Assets/hero1.jpg",
+      avatar: "/assets/webp/hero1.webp",
+      avatarWidth: 1024,
+      avatarHeight: 1024,
     },
     {
       name: "Michael Chen",
       position: "Marketing Director",
       company: "GrowthCorp",
       testimonial: "Working with JASTUTE was a game-changer for our brand. They delivered a stunning website that not only looks amazing but also drives real results.",
-      avatar: "/Assets/hero1.png",
+      avatar: "/assets/webp/hero1.webp",
+      avatarWidth: 1024,
+      avatarHeight: 1024,
     },
     {
       name: "Emily Rodriguez",
       position: "Founder",
       company: "Creative Studios",
       testimonial: "The team at JASTUTE understood our vision perfectly and brought it to life beyond our expectations. Their creative solutions are unmatched.",
-      avatar: "/Assets/hero3.jpeg",
+      avatar: "/assets/webp/hero3.webp",
+      avatarWidth: 626,
+      avatarHeight: 417,
     },
     {
       name: "David Thompson",
       position: "Operations Manager",
       company: "Wellness Hub",
       testimonial: "JASTUTE Solutions delivered exceptional results for our healthcare platform. Their user-centric design approach greatly improved our patient engagement.",
-      avatar: "/Assets/hero1.jpg",
+      avatar: "/assets/webp/hero1.webp",
+      avatarWidth: 1024,
+      avatarHeight: 1024,
     },
   ];
 
@@ -678,16 +686,17 @@ export default function Testimonials() {
                   {/* Client Info */}
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 rounded-full overflow-hidden bg-[#E0F0DF] border-2 border-[#063837]/10">
-                      <Image
-                        src={t.avatar}
-                        alt={t.name}
-                        width={48}
-                        height={48}
-                        className="w-full h-full object-cover"
-                        onError={(e) => {
-                          e.currentTarget.src = "/Assets/placeholder-avatar.jpg"; // fallback
-                        }}
-                      />
+                        <Image
+                          src={t.avatar}
+                          alt={t.name}
+                          width={t.avatarWidth || 48}
+                          height={t.avatarHeight || 48}
+                          className="w-full h-full object-cover"
+                          onError={(e) => {
+                            // For Next/Image fallback, attempt to replace with a local placeholder
+                            try { e.currentTarget.src = "/assets/webp/hero1.webp"; } catch (_) {}
+                          }}
+                        />
                     </div>
                     <div>
                       <h4 className="font-bold text-[#063837]">{t.name}</h4>
