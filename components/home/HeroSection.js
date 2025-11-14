@@ -7,12 +7,14 @@ import AnimatedBackground from './AnimatedBackground';
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
 
+  // Portfolio images with their dimensions
   const portfolioImages = [
     { webp: '/assets/webp/hero1.webp', width: 1024, height: 1024 },
     { webp: '/assets/webp/hero3.webp', width: 626, height: 417 },
     { webp: '/assets/webp/hero4.webp', width: 339, height: 508 },
     { webp: '/assets/webp/Bdevelopment.webp', width: 736, height: 552 },
   ];
+  
 
   useEffect(() => {
     const timer = setInterval(() => {
