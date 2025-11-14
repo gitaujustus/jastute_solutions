@@ -22,7 +22,7 @@ export default function OptimizedImage({ src, alt, width, height, className = ''
         width={width}
         height={height}
         priority={priority}
-        onLoadingComplete={() => setLoaded(true)}
+        onLoad={() => setLoaded(true)}
         onError={() => setLoaded(true)}
         className={`relative z-10 w-full h-full object-cover ${loaded ? 'opacity-100 transition-opacity duration-300' : 'opacity-0'}`}
         {...props}

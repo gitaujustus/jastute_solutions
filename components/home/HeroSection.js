@@ -27,7 +27,7 @@ export default function HeroSection() {
   }, [portfolioImages.length]);
 
   return (
-    <section className="min-h-[80vh] md:min-h-screen flex items-center px-6 sm:px-[30px] lg:px-14 py-10 bg-[#E0F0DF] relative overflow-hidden md:pt-32">
+    <section className="min-h-[80vh] md:min-h-screen flex items-center px-6 sm:px-[30px] lg:px-14 py-10 bg-[#E0F0DF] relative overflow-hidden pt-24 md:pt-32">
       <AnimatedBackground />
       
       <div className="max-w-7xl mx-auto w-full relative z-10">

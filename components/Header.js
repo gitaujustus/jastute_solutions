@@ -39,12 +39,12 @@ export default function Header() {
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8 xl:space-x-12 text-[16px] md:text-[18px] 2xl:text-[20px]">
-            <Link href="/" className={`transition-colors ${pathname === '/' ? 'text-[#FCB043] font-semibold' : 'text-[#242B29] hover:text-[#063837]'}`}>Home</Link>
-            <Link href="/services" className={`transition-colors ${pathname === '/services' ? 'text-[#FCB043] font-semibold' : 'text-[#242B29] hover:text-[#063837]'}`}>Services</Link>
-            <Link href="/about" className={`transition-colors ${pathname === '/about' ? 'text-[#FCB043] font-semibold' : 'text-[#242B29] hover:text-[#063837]'}`}>About</Link>
-            <Link href="/contacts" className={`transition-colors ${pathname === '/contacts' ? 'text-[#FCB043] font-semibold' : 'text-[#242B29] hover:text-[#063837]'}`}>Contact</Link>
+            <Link href="/" className={`transition-colors ${pathname === '/' ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`}>Home</Link>
+            <Link href="/services" className={`transition-colors ${pathname === '/services' ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`}>Services</Link>
+            <Link href="/about" className={`transition-colors ${pathname === '/about' ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`}>About</Link>
+            <Link href="/contacts" className={`transition-colors ${pathname === '/contacts' ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`}>Contact</Link>
             <button 
-              onClick={() => window.open('mailto:jastutesolutions@gmail.com?subject=Quote%20Request%20-%20JASTUTE%20Solutions&body=Hello%20JASTUTE%20Solutions!%20I\'m%20interested%20in%20your%20services%20and%20would%20like%20to%20request%20a%20quote%20for%20my%20project.', '_blank')}
+              onClick={() => window.open('mailto:jastutesolutions@gmail.com?subject=Quote%20Request%20-%20JASTUTE%20SOLUTIONS&body=Hello%20JASTUTE%20SOLUTIONS!%20I\'m%20interested%20in%20your%20services%20and%20would%20like%20to%20request%20a%20quote%20for%20my%20project.', '_blank')}
               className="bg-linear-to-r from-[#063837] to-[#FCB043] text-white px-6 py-2 rounded-full hover:shadow-lg transition-shadow"
             >
               Get a Quote
@@ -52,11 +52,14 @@ export default function Header() {
           </div>
           
           {/* Mobile Menu Button */}
-          <button 
-            className="md:hidden text-[#063837]"
+          <button
+            className="md:hidden bg-[#FCB043] text-[#063837] rounded-md p-2 flex items-center justify-center shadow-sm hover:shadow-md"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+            aria-expanded={isMenuOpen}
+            title={isMenuOpen ? 'Close menu' : 'Open menu'}
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
             </svg>
           </button>
@@ -75,10 +78,10 @@ export default function Header() {
           {/* Menu Content */}
           <div className="md:hidden fixed left-0 right-0 top-20 bg-white z-50 shadow-lg">
             <div className="px-6 py-8 space-y-6">
-              <Link href="/" className={`block py-3 text-[16px] md:text-[18px] 2xl:text-[20px] transition-colors ${pathname === '/' ? 'text-[#FCB043] font-semibold' : 'text-[#242B29] hover:text-[#063837]'}`} onClick={() => setIsMenuOpen(false)}>Home</Link>
-              <Link href="/services" className={`block py-3 text-[16px] md:text-[18px] 2xl:text-[20px] transition-colors ${pathname === '/services' ? 'text-[#FCB043] font-semibold' : 'text-[#242B29] hover:text-[#063837]'}`} onClick={() => setIsMenuOpen(false)}>Services</Link>
-              <Link href="/about" className={`block py-3 text-[16px] md:text-[18px] 2xl:text-[20px] transition-colors ${pathname === '/about' ? 'text-[#FCB043] font-semibold' : 'text-[#242B29] hover:text-[#063837]'}`} onClick={() => setIsMenuOpen(false)}>About</Link>
-              <Link href="/contacts" className={`block py-3 text-[16px] md:text-[18px] 2xl:text-[20px] transition-colors ${pathname === '/contacts' ? 'text-[#FCB043] font-semibold' : 'text-[#242B29] hover:text-[#063837]'}`} onClick={() => setIsMenuOpen(false)}>Contact</Link>
+              <Link href="/" className={`block py-3 text-[16px] md:text-[18px] 2xl:text-[20px] transition-colors ${pathname === '/' ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`} onClick={() => setIsMenuOpen(false)}>Home</Link>
+              <Link href="/services" className={`block py-3 text-[16px] md:text-[18px] 2xl:text-[20px] transition-colors ${pathname === '/services' ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`} onClick={() => setIsMenuOpen(false)}>Services</Link>
+              <Link href="/about" className={`block py-3 text-[16px] md:text-[18px] 2xl:text-[20px] transition-colors ${pathname === '/about' ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`} onClick={() => setIsMenuOpen(false)}>About</Link>
+              <Link href="/contacts" className={`block py-3 text-[16px] md:text-[18px] 2xl:text-[20px] transition-colors ${pathname === '/contacts' ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`} onClick={() => setIsMenuOpen(false)}>Contact</Link>
               <button 
                 onClick={() => {
                   window.open('mailto:jastutesolutions@gmail.com?subject=Quote%20Request%20-%20JASTUTE%20Solutions&body=Hello%20JASTUTE%20Solutions!%20I\'m%20interested%20in%20your%20services%20and%20would%20like%20to%20request%20a%20quote%20for%20my%20project.', '_blank');

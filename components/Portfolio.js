@@ -133,6 +133,8 @@ export default function Portfolio() {
               className="p-3 rounded-full bg-[#E0F0DF]/10 hover:bg-[#FCB043] text-[#E0F0DF] hover:text-[#063837] transition-all duration-300"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
+              aria-label="Previous project"
+              title="Previous project"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -145,6 +147,9 @@ export default function Portfolio() {
               className="p-4 rounded-full bg-[#FCB043] text-[#063837] hover:bg-[#FCB043]/80 transition-all duration-300"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
+              aria-label={isPlaying ? 'Pause auto-rotation' : 'Play auto-rotation'}
+              title={isPlaying ? 'Pause auto-rotation' : 'Play auto-rotation'}
+              aria-pressed={isPlaying}
             >
               {isPlaying ? (
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -163,6 +168,8 @@ export default function Portfolio() {
               className="p-3 rounded-full bg-[#E0F0DF]/10 hover:bg-[#FCB043] text-[#E0F0DF] hover:text-[#063837] transition-all duration-300"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}
+              aria-label="Next project"
+              title="Next project"
             >
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -181,6 +188,8 @@ export default function Portfolio() {
                 }`}
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.8 }}
+                aria-label={`Go to project ${index + 1}`}
+                title={`Go to project ${index + 1}`}
               />
             ))}
           </div>

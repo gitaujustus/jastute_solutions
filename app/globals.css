@@ -22,3 +22,8 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Ensure all native button elements show pointer cursor for better affordance */
+button {
+  cursor: pointer;
+}
+
