@@ -49,7 +49,7 @@ export default function Portfolio() {
     
     const timer = setInterval(() => {
       setCurrentProject((prev) => (prev + 1) % projects.length);
-    }, 5000);
+    }, 10000);
     
     return () => clearInterval(timer);
   }, [isPlaying, projects.length]);

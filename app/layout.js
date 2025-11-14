@@ -2,7 +2,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-<link rel="preload" as="image" href="/Assets/hero1.png" />
 
 
 const geistSans = Geist({
@@ -76,10 +75,9 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/Assets/jastute-logo.png" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#063837" />
-        <link rel="preload" href="/Assets/hero1.png" as="image" />
+        <link rel="preload" href="/assets/webp/hero1.webp" as="image" type="image/webp" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="https://wa.me" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}

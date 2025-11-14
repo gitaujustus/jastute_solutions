@@ -2,7 +2,10 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import AnimatedBackground from './AnimatedBackground';
+import dynamic from 'next/dynamic';
+
+// Load animated background after initial paint to avoid blocking the main bundle.
+const AnimatedBackground = dynamic(() => import('./AnimatedBackground'), { ssr: false });
 
 export default function HeroSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -74,7 +77,7 @@ export default function HeroSection() {
               transition={{ delay: 0.6, duration: 0.8 }}
             >
               <motion.button 
-                onClick={() => window.open('https://wa.me/254729144533?text=Hello%20JASTUTE%20Solutions!%20I\'m%20interested%20in%20your%20services%20and%20would%20like%20to%20request%20a%20quote%20for%20my%20project.', '_blank')}
+                onClick={() => window.open('mailto:jastutesolutions@gmail.com?subject=Quote%20Request%20-%20JASTUTE%20Solutions&body=Hello%20JASTUTE%20Solutions!%20I\'m%20interested%20in%20your%20services%20and%20would%20like%20to%20request%20a%20quote%20for%20my%20project.', '_blank')}
                 className="bg-gradient-to-r from-[#063837] to-[#FCB043] text-white px-8 py-4 rounded-full font-semibold flex items-center gap-2 hover:shadow-lg transition-shadow"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}

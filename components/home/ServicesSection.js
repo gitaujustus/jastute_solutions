@@ -38,8 +38,8 @@ export default function ServicesSection() {
       title: "Branding",
       description: "Complete brand identity design including logos, brand guidelines, and marketing materials that make lasting impressions.",
       image: "/assets/webp/Branding.webp",
-      width: 4955,
-      height: 4912
+      width: 624,
+      height: 619
     },
     {
       title: "CV & Profile Design",
