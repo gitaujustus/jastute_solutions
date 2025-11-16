@@ -3,9 +3,21 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
+import { RiArrowDropDownLine } from 'react-icons/ri';
+
+const services = [
+  { name: 'Website Design & Redesign', href: '/services/website-design-redesign' },
+  { name: 'Custom Web Development', href: '/services/custom-website-development' },
+  { name: 'Web Business Solutions', href: '/services/custom-web-systems' },
+  { name: 'Web Hosting & Domains', href: '/services/hosting-domains' },
+  { name: 'Web Strategy & Consulting', href: '/services/strategy-consulting' },
+  { name: 'Branding & Graphic Design', href: '/services/branding-design' },
+  { name: 'CV & Profile Design', href: '#' },
+];
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
 
@@ -21,7 +33,7 @@ export default function Header() {
     <header 
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled ? 'bg-white shadow-lg' : 'bg-transparent'
-      } ${isMenuOpen ? 'bg-white' : ''}`}
+      }`}
     >
       {/* Navigation */}
       <nav className="px-6 py-4">
@@ -40,7 +52,33 @@ export default function Header() {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8 xl:space-x-12 text-[16px] md:text-[18px] 2xl:text-[20px]">
             <Link href="/" className={`transition-colors ${pathname === '/' ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`}>Home</Link>
-            <Link href="/services" className={`transition-colors ${pathname === '/services' ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`}>Services</Link>
+            
+            {/* Desktop Services Dropdown */}
+            <div className="relative group">
+              <Link 
+                href="/services"
+                className={`transition-colors flex items-center gap-1 ${pathname.startsWith('/services') ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`}
+              >
+                Services
+                <RiArrowDropDownLine className="w-5 h-5 transition-transform group-hover:rotate-180" />
+              </Link>
+              
+              {/* Dropdown Menu */}
+              <div className="absolute left-0 mt-6 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-40">
+                <div className="py-2">
+                  {services.map((service) => (
+                    <Link
+                      key={service.href}
+                      href={service.href}
+                      className="block px-4 py-3 text-[#242B29] hover:bg-[#E0F0DF] hover:text-[#073737] transition-colors text-sm"
+                    >
+                      {service.name}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            </div>
+            
             <Link href="/about" className={`transition-colors ${pathname === '/about' ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`}>About</Link>
             <Link href="/contacts" className={`transition-colors ${pathname === '/contacts' ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`}>Contact</Link>
             <button 
@@ -75,11 +113,41 @@ export default function Header() {
             onClick={() => setIsMenuOpen(false)}
           />
           
-          {/* Menu Content */}
-          <div className="md:hidden fixed left-0 right-0 top-20 bg-white z-50 shadow-lg">
-            <div className="px-6 py-8 space-y-6">
+          {/* Mobile Sidebar (slides from right) */}
+          <div className="md:hidden fixed right-0 top-20 bottom-0 w-3/4 max-w-sm bg-white z-50 shadow-lg overflow-y-auto">
+            <div className="px-6 py-8 space-y-2">
               <Link href="/" className={`block py-3 text-[16px] md:text-[18px] 2xl:text-[20px] transition-colors ${pathname === '/' ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`} onClick={() => setIsMenuOpen(false)}>Home</Link>
-              <Link href="/services" className={`block py-3 text-[16px] md:text-[18px] 2xl:text-[20px] transition-colors ${pathname === '/services' ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`} onClick={() => setIsMenuOpen(false)}>Services</Link>
+              
+              {/* Mobile Services Dropdown */}
+              <div>
+                <button 
+                  onClick={() => setIsServicesOpen(!isServicesOpen)}
+                  className={`w-full text-left py-3 text-[16px] md:text-[18px] 2xl:text-[20px] transition-colors flex items-center justify-between ${pathname.startsWith('/services') ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`}
+                >
+                  Services
+                  <RiArrowDropDownLine className={`w-5 h-5 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+                </button>
+                
+                {/* Mobile Services Submenu */}
+                {isServicesOpen && (
+                  <div className="pl-4 space-y-2 bg-[#E0F0DF]/30 rounded-lg mt-2 py-2">
+                    {services.map((service) => (
+                      <Link
+                        key={service.href}
+                        href={service.href}
+                        className="block py-2 text-sm text-[#242B29] hover:text-[#073737] hover:font-semibold transition-colors"
+                        onClick={() => {
+                          setIsMenuOpen(false);
+                          setIsServicesOpen(false);
+                        }}
+                      >
+                        {service.name}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+              
               <Link href="/about" className={`block py-3 text-[16px] md:text-[18px] 2xl:text-[20px] transition-colors ${pathname === '/about' ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`} onClick={() => setIsMenuOpen(false)}>About</Link>
               <Link href="/contacts" className={`block py-3 text-[16px] md:text-[18px] 2xl:text-[20px] transition-colors ${pathname === '/contacts' ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`} onClick={() => setIsMenuOpen(false)}>Contact</Link>
               <button 
