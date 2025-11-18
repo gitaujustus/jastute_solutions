@@ -41,14 +41,14 @@ export const metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'JASTUTE Solutions',
-    images: ['/Assets/Services/Web Development.jpeg'],
+    images: ['/assets/webp/Web Development.webp'],
     url: '/services/custom-website-development',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Custom Website Development Services | JASTUTE Solutions',
     description: 'Custom website development built for serious business growth. Fast, reliable, SEO-friendly websites.',
-    images: ['/Assets/Services/Web Development.jpeg'],
+    images: ['/assets/webp/Web Development.webp'],
   },
   alternates: {
     canonical: '/services/custom-website-development',

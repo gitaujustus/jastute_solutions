@@ -91,7 +91,7 @@ export default function CustomWebDevHero() {
           >
             <div className="relative aspect-video lg:aspect-auto">
               <Image 
-                src="/Assets/Services/Web Development.jpeg"
+                src="/assets/webp/Web Development.webp"
                 alt="Custom Website Development"
                 width={600}
                 height={400}
