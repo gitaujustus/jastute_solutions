@@ -11,6 +11,15 @@ export const metadata = {
     description: "Comprehensive digital services to transform your business. Web design, graphic design, IT consultancy, and more.",
     url: '/services',
   },
+  // image preview
+ images: [
+      {
+      url: '/assets/webp/Website Redesign.webp',
+        width: 736,
+        height: 560,
+        alt: 'JASTUTE Solutions Website Redesign Overview',
+      },
+    ]
 };
 
 export default function Services() {

@@ -30,7 +30,7 @@ export default function JourneySection() {
           
           <motion.div
             className="space-y-8 order-1 lg:order-2"
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}

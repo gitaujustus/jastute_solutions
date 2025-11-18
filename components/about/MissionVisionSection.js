@@ -40,7 +40,7 @@ export default function MissionVisionSection() {
           
           <motion.div
             className="space-y-12 order-2 lg:order-2"
-            initial={{ opacity: 0, x: 50 }}
+            initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
             viewport={{ once: true }}

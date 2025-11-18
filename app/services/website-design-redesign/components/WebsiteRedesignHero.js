@@ -70,15 +70,15 @@ export default function WebsiteRedesignHero() {
             >
               <div className="text-center">
                 <div className="text-2xl font-bold text-[#063837]">50+</div>
-                <div className="text-sm text-[#242B29]/70">Websites Built</div>
+                <div className="text-sm text-[#242B29]/70">Websites Built.</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-[#063837]">98%</div>
-                <div className="text-sm text-[#242B29]/70">Client Satisfaction</div>
+                <div className="text-sm text-[#242B29]/70">Client Satisfaction.</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl font-bold text-[#063837]">24h</div>
-                <div className="text-sm text-[#242B29]/70">Quick Turnaround</div>
+                <div className="text-sm text-[#242B29]/70">Quick Turnaround.</div>
               </div>
             </motion.div>
           </motion.div>
@@ -91,7 +91,7 @@ export default function WebsiteRedesignHero() {
           >
             <div className="relative aspect-video lg:aspect-auto">
               <Image 
-                src="/Assets/Services/Website Redesign.jpeg"
+                src="/assets/webp/Website Redesign.webp"
                 alt="Website Design & Redesign"
                 width={600}
                 height={400}

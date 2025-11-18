@@ -42,8 +42,7 @@ export const metadata = {
     siteName: 'JASTUTE Solutions',
     images: [
       {
-  // Use the Thumbnail image for social preview (absolute URL on the staging host)
-  url: 'https://jastutesolution.vercel.app/assets/Thumbnail.png',
+      url: '/assets/webp/Jastute-logo-v.webp',
         width: 1200,
         height: 630,
         alt: 'JASTUTE Solutions - Attract. Impact. Grow.',
