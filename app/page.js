@@ -28,13 +28,13 @@ export const metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'JASTUTE Solutions',
-    images: ['/Assets/preview.png'],
+    images: ['/assets/webp/jastute-logo-v.webp'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'JASTUTE Solutions - Smart Digital Solutions',
     description: 'We help brands stand out through smart digital solutions.',
-    images: ['/Assets/preview.png'],
+    images: ['/assets/webp/jastute-logo-v.webp'],
   },
   robots: {
     index: true,

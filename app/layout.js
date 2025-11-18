@@ -42,7 +42,7 @@ export const metadata = {
     siteName: 'JASTUTE Solutions',
     images: [
       {
-      url: '/assets/webp/Jastute-logo-v.webp',
+      url: '/assets/group-of-newborn-chicks.webp',
         width: 1200,
         height: 630,
         alt: 'JASTUTE Solutions - Attract. Impact. Grow.',
@@ -56,7 +56,7 @@ export const metadata = {
     title: "JASTUTE Solutions - Digital Design & Development",
     description: "Leading digital design and development agency in Kenya. Attract. Impact. Grow.",
   // Twitter expects an absolute URL or a path resolvable from the site root
-  images: ['https://jastutesolution.vercel.app/assets/Thumbnail.png'],
+  images: ['/assets/group-of-newborn-chicks.webp'],
   },
   robots: {
     index: true,
