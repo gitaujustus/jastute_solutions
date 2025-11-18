@@ -24,17 +24,17 @@ export const metadata = {
   authors: [{ name: 'JASTUTE Solutions' }],
   openGraph: {
     title: 'JASTUTE Solutions - Smart Digital Solutions',
-    description: 'We help brands stand out through smart digital solutions. Transform your business with our web design, branding, and consultancy services.',
+    description: 'We helpp brands stand out through smart digital solutions. Transform your business with our web design, branding, and consultancy services.',
     type: 'website',
     locale: 'en_US',
     siteName: 'JASTUTE Solutions',
-    images: ['/assets/webp/jastute-logo-v.webp'],
+    images: ['/assets/group-of-newborn-chicks.webp'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'JASTUTE Solutions - Smart Digital Solutions',
     description: 'We help brands stand out through smart digital solutions.',
-    images: ['/assets/webp/jastute-logo-v.webp'],
+    images: ['/assets/group-of-newborn-chicks.webp'],
   },
   robots: {
     index: true,

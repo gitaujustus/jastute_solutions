@@ -40,12 +40,20 @@ export const metadata = {
     description: "Leading digital design and development agency in Kenya. We help brands stand out through innovative digital solutions.",
   url: 'https://jastutesolution.vercel.app',
     siteName: 'JASTUTE Solutions',
+    // images: [
+    //   {
+    //   url: '/assets/group-of-newborn-chicks.webp',
+    //     width: 1200,
+    //     height: 630,
+    //     alt: 'JASTUTE Solutions - Attract. Impact. Grow.',
+    //   },
+    // ],
     images: [
       {
-      url: '/assets/group-of-newborn-chicks.webp',
+        url: "/assets/group-of-newborn-chicks.webp",
         width: 1200,
         height: 630,
-        alt: 'JASTUTE Solutions - Attract. Impact. Grow.',
+        alt: "Kibunja Farm - Day-old chicks and poultry in Kenya",
       },
     ],
     locale: 'en_US',
@@ -55,7 +63,6 @@ export const metadata = {
     card: 'summary_large_image',
     title: "JASTUTE Solutions - Digital Design & Development",
     description: "Leading digital design and development agency in Kenya. Attract. Impact. Grow.",
-  // Twitter expects an absolute URL or a path resolvable from the site root
   images: ['/assets/group-of-newborn-chicks.webp'],
   },
   robots: {
