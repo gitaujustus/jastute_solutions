@@ -28,13 +28,13 @@ export const metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'JASTUTE Solutions',
-    images: ['/assets/group-of-newborn-chicks.webp'],
+    images: ['/assets/webp/jastute-logo-v1.webp'],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'JASTUTE Solutions - Smart Digital Solutions',
     description: 'We help brands stand out through smart digital solutions.',
-    images: ['/assets/group-of-newborn-chicks.webp'],
+    images: ['/assets/webp/jastute-logo-v1.webp'],
   },
   robots: {
     index: true,

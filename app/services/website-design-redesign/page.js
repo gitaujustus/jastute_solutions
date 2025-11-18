@@ -41,14 +41,14 @@ export const metadata = {
     type: 'website',
     locale: 'en_US',
     siteName: 'JASTUTE Solutions',
-    images: ['/Assets/Services/Website Redesign.jpeg'],
+    images: ['/assets/webp/Website Redesign.web'],
     url: '/services/website-design-redesign',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Business Website Design & Redesign Services | JASTUTE Solutions',
     description: 'Transform your outdated website into a brand asset. Professional website design & redesign services in Kenya.',
-    images: ['/Assets/Services/Website Redesign.jpeg'],
+    images: ['/assets/webp/Website Redesign.web'],
   },
   alternates: {
     canonical: '/services/website-design-redesign',
