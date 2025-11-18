@@ -13,10 +13,15 @@ export default function BrandingHero() {
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="inline-flex items-center gap-3 bg-[#FCB043]/10 rounded-full px-6 py-3 mb-6">
-              <FaPalette className="w-5 h-5 text-[#FCB043]" />
-              <span className="text-[#063837] font-semibold">Branding & Design</span>
-            </div>
+            <motion.div 
+               className="flex items-center gap-2 bg-white rounded-full px-4 py-2 w-fit"
+               initial={{ opacity: 0, scale: 0.8 }}
+               animate={{ opacity: 1, scale: 1 }}
+               transition={{ delay: 0.2, duration: 0.5 }}
+             >
+               <FaPalette className="w-5 h-5 text-[#FCB043]" />
+             <span className="text-[#063837] font-semibold">Branding & Design</span>
+             </motion.div>
             
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#063837] mb-6 leading-tight">
               Good Design is Equivalent to Good Business

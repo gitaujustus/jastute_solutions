@@ -26,9 +26,9 @@ export const metadata = {
     url: 'https://jastutesolutions.co.ke/services/branding-design',
     images: [
       {
-        url: '/assets/og-branding-design.jpg',
-        width: 1200,
-        height: 630,
+        url: '/assets/webp/Branding.webp',
+        // width: 1200,
+        // height: 630,
         alt: 'JASTUTE Solutions - Branding & Graphic Design'
       }
     ]
@@ -37,7 +37,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Branding & Graphic Design | JASTUTE Solutions',
     description: 'Professional branding and graphic design services. Custom logos, brand kits, marketing materials, and visual identity design that drives business results.',
-    images: ['/assets/og-branding-design.jpg']
+    images: ['/assets/webp/Branding.webp']
   },
   alternates: {
     canonical: 'https://jastutesolutions.co.ke/services/branding-design'

@@ -22,7 +22,7 @@ export const metadata = {
     url: 'https://jastutesolutions.co.ke/services/hosting-domains',
     images: [
       {
-        url: '/assets/og-hosting-domains.jpg',
+        url: '/assets/webp/Web Hosting.webp',
         width: 1200,
         height: 630,
         alt: 'JASTUTE Solutions - Website Hosting & Domain Registration'
@@ -33,7 +33,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Website Hosting & Domain Registration | JASTUTE Solutions',
     description: 'Reliable, fast, and secure web hosting with professional domain registration. 99.9% uptime, SSL certificates, business email, and expert support in Kenya.',
-    images: ['/assets/og-hosting-domains.jpg']
+    images: ['/assets/webp/Web Hosting.webp']
   },
   alternates: {
     canonical: 'https://jastutesolutions.co.ke/services/hosting-domains'

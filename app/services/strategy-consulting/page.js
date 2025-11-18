@@ -22,9 +22,9 @@ export const metadata = {
     url: 'https://jastutesolutions.co.ke/services/strategy-consulting',
     images: [
       {
-        url: '/assets/og-strategy-consulting.jpg',
-        width: 1200,
-        height: 630,
+        url: '/assets/webp/web anaysis.jpg',
+        // width: 1200,
+        // height: 630,
         alt: 'JASTUTE Solutions - Website Strategy & Consulting'
       }
     ]
@@ -33,7 +33,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Website Strategy & Consulting | JASTUTE Solutions',
     description: 'Transform underperforming websites into powerful business tools. Expert consulting with design audits, performance optimization, and conversion strategies.',
-    images: ['/assets/og-strategy-consulting.jpg']
+    images: ['/assets/webp/web anaysis.jpg']
   },
   alternates: {
     canonical: 'https://jastutesolutions.co.ke/services/strategy-consulting'
