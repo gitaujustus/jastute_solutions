@@ -51,13 +51,13 @@ export default function Header() {
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8 xl:space-x-12 text-[16px]  2xl:text-[18px]">
-            <Link href="/" className={`transition-colors ${pathname === '/' ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`}>Home</Link>
+            <Link href="/" className={`transition-colors px-3 py-[5px] rounded-lg ${pathname === '/' ? 'text-[#063837] font-semibold bg-[#F0AA44]/60' : 'text-[#242B29] hover:text-[#FCB043]'}`}>Home</Link>
             
             {/* Desktop Services Dropdown */}
             <div className="relative group">
               <Link 
                 href="/services"
-                className={`transition-colors flex items-center gap-1 ${pathname.startsWith('/services') ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`}
+                className={`transition-colors flex items-center gap-1 px-3 py-[5px] rounded-lg ${pathname.startsWith('/services') ? 'text-[#063837] font-semibold bg-[#F0AA44]/60' : 'text-[#242B29] hover:text-[#FCB043]'}`}
               >
                 Services
                 <RiArrowDropDownLine className="w-8 h-8 transition-transform group-hover:rotate-180" />
@@ -70,7 +70,7 @@ export default function Header() {
                     <Link
                       key={service.href}
                       href={service.href}
-                      className="block px-4 py-3 text-[#242B29] hover:bg-[#E0F0DF] hover:text-[#073737] transition-colors text-sm"
+                      className={`block px-4 py-[5px] transition-colors text-sm ${pathname === service.href ? 'text-[#063837] font-bold bg-[#F0AA44]/40' : 'text-[#242B29] hover:bg-[#E0F0DF] hover:text-[#073737]'}`}
                     >
                       {service.name}
                     </Link>
@@ -79,11 +79,19 @@ export default function Header() {
               </div>
             </div>
             
-            <Link href="/about" className={`transition-colors ${pathname === '/about' ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`}>About</Link>
-            <Link href="/contacts" className={`transition-colors ${pathname === '/contacts' ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`}>Contact</Link>
+            <Link href="/about" className={`transition-colors px-3 py-[5px] rounded-lg ${pathname === '/about' ? 'text-[#063837] font-semibold bg-[#F0AA44]/60' : 'text-[#242B29] hover:text-[#FCB043]'}`}>About</Link>
+            <button 
+              onClick={() => {
+                window.location.href = '/#portfolio';
+              }}
+              className="transition-colors px-3 py-[5px] rounded-lg text-[#242B29] hover:text-[#FCB043]"
+            >
+              Portfolio
+            </button>
+            <Link href="/contacts" className={`transition-colors px-3 py-[5px] rounded-lg ${pathname === '/contacts' ? 'text-[#063837] font-semibold bg-[#F0AA44]/60' : 'text-[#242B29] hover:text-[#FCB043]'}`}>Contact</Link>
             <button 
               onClick={() => window.open('mailto:jastutesolutions@gmail.com?subject=Quote%20Request%20-%20JASTUTE%20SOLUTIONS&body=Hello%20JASTUTE%20SOLUTIONS!%20I\'m%20interested%20in%20your%20services%20and%20would%20like%20to%20request%20a%20quote%20for%20my%20project.', '_blank')}
-              className="bg-linear-to-r from-[#063837] to-[#FCB043] text-white px-6 py-2 rounded-full hover:shadow-lg transition-shadow"
+              className="bg-linear-to-r from-[#063837] to-[#FCB043] text-white px-6 py-[5px] rounded-full hover:shadow-lg transition-shadow"
             >
               Get a Quote
             </button>
@@ -105,24 +113,22 @@ export default function Header() {
       </nav>
       
       {/* Mobile Menu Overlay */}
-      {isMenuOpen && (
-        <>
-          {/* Dark Backdrop */}
-          <div 
-            className="md:hidden fixed inset-0 top-16 bg-black/70 z-40 h-full"
-            onClick={() => setIsMenuOpen(false)}
-          />
-          
-          {/* Mobile Sidebar (slides from right) */}
-          <div className="md:hidden fixed right-0 top-16 bottom-0 w-3/4 max-w-sm bg-white z-50 shadow-lg overflow-y-auto">
+      {/* Dark Backdrop */}
+      <div 
+        className={`md:hidden fixed inset-0 top-16 bg-black/70 z-40 h-full transition-opacity duration-300 ${isMenuOpen ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+        onClick={() => setIsMenuOpen(false)}
+      />
+      
+      {/* Mobile Sidebar (slides from right) */}
+      <div className={`md:hidden fixed right-0 top-16 bottom-0 w-3/4 max-w-sm bg-white z-50 shadow-lg overflow-y-auto transform transition-transform duration-300 ease-in-out ${isMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}>
             <div className="px-6 py-8 space-y-2">
-              <Link href="/" className={`block py-3 text-[16px] md:text-[18px] 2xl:text-[20px] transition-colors ${pathname === '/' ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`} onClick={() => setIsMenuOpen(false)}>Home</Link>
+              <Link href="/" className={`block py-3 px-3 rounded-lg text-[16px] md:text-[18px] 2xl:text-[20px] transition-colors ${pathname === '/' ? 'text-[#063837] font-semibold bg-[#F0AA44]/60' : 'text-[#242B29] hover:text-[#FCB043]'}`} onClick={() => setIsMenuOpen(false)}>Home</Link>
               
               {/* Mobile Services Dropdown */}
               <div>
                 <button 
                   onClick={() => setIsServicesOpen(!isServicesOpen)}
-                  className={`w-full text-left py-3 text-[16px] md:text-[18px] 2xl:text-[20px] transition-colors flex items-center justify-between ${pathname.startsWith('/services') ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`}
+                  className={`w-full text-left py-3 px-3 rounded-lg text-[16px] md:text-[18px] 2xl:text-[20px] transition-colors flex items-center justify-between ${pathname.startsWith('/services') ? 'text-[#063837] font-semibold bg-[#F0AA44]/60' : 'text-[#242B29] hover:text-[#FCB043]'}`}
                 >
                   Services
                   <RiArrowDropDownLine className={`w-8 h-8 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
@@ -135,7 +141,7 @@ export default function Header() {
                       <Link
                         key={service.href}
                         href={service.href}
-                        className="block py-2 text-sm text-[#242B29] hover:text-[#073737] hover:font-semibold transition-colors"
+                        className={`block py-2 text-sm transition-colors ${pathname === service.href ? 'text-[#063837] font-bold' : 'text-[#242B29] hover:text-[#073737] hover:font-semibold'}`}
                         onClick={() => {
                           setIsMenuOpen(false);
                           setIsServicesOpen(false);
@@ -148,8 +154,17 @@ export default function Header() {
                 )}
               </div>
               
-              <Link href="/about" className={`block py-3 text-[16px] md:text-[18px] 2xl:text-[20px] transition-colors ${pathname === '/about' ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`} onClick={() => setIsMenuOpen(false)}>About</Link>
-              <Link href="/contacts" className={`block py-3 text-[16px] md:text-[18px] 2xl:text-[20px] transition-colors ${pathname === '/contacts' ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`} onClick={() => setIsMenuOpen(false)}>Contact</Link>
+              <Link href="/about" className={`block py-3 px-3 rounded-lg text-[16px] md:text-[18px] 2xl:text-[20px] transition-colors ${pathname === '/about' ? 'text-[#063837] font-semibold bg-[#F0AA44]/60' : 'text-[#242B29] hover:text-[#FCB043]'}`} onClick={() => setIsMenuOpen(false)}>About</Link>
+              <button 
+                onClick={() => {
+                  window.location.href = '/#portfolio';
+                  setIsMenuOpen(false);
+                }}
+                className="block py-3 px-3 rounded-lg text-[16px] md:text-[18px] 2xl:text-[20px] transition-colors text-[#242B29] hover:text-[#FCB043] text-left w-full"
+              >
+                Portfolio
+              </button>
+              <Link href="/contacts" className={`block py-3 px-3 rounded-lg text-[16px] md:text-[18px] 2xl:text-[20px] transition-colors ${pathname === '/contacts' ? 'text-[#063837] font-semibold bg-[#F0AA44]/60' : 'text-[#242B29] hover:text-[#FCB043]'}`} onClick={() => setIsMenuOpen(false)}>Contact</Link>
               <button 
                 onClick={() => {
                   window.open('mailto:jastutesolutions@gmail.com?subject=Quote%20Request%20-%20JASTUTE%20Solutions&body=Hello%20JASTUTE%20Solutions!%20I\'m%20interested%20in%20your%20services%20and%20would%20like%20to%20request%20a%20quote%20for%20my%20project.', '_blank');
@@ -161,8 +176,6 @@ export default function Header() {
               </button>
             </div>
           </div>
-        </>
-      )}
     </header>
   );
 }

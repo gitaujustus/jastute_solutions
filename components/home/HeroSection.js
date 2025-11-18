@@ -107,24 +107,28 @@ export default function HeroSection() {
             transition={{ delay: 0.4, duration: 0.8 }}
           >
             <div className="relative">
-              <motion.div 
-                className="bg-white rounded-2xl shadow-lg border border-[#E0F0DF]"
-                key={currentSlide}
-                initial={{ opacity: 0, scale: 0.9 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                <div className="sm:aspect-video lg:aspect-square bg-gray-100 rounded-2xl flex items-center justify-center overflow-hidden">
-                  <OptimizedImage 
-                    src={portfolioImages[currentSlide].webp} 
-                    alt={`Project ${currentSlide + 1}`}
-                    width={portfolioImages[currentSlide].width}
-                    height={portfolioImages[currentSlide].height}
-                    priority={currentSlide === 0}
-                    className="w-full h-full object-cover object-top rounded-2xl"
-                  />
+              <div className="bg-white rounded-2xl shadow-lg border border-[#E0F0DF] relative">
+                <div className="sm:aspect-video lg:aspect-square bg-gray-100 rounded-2xl flex items-center justify-center overflow-hidden relative">
+                  {portfolioImages.map((image, index) => (
+                    <motion.div
+                      key={index}
+                      className="absolute inset-0"
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: index === currentSlide ? 1 : 0 }}
+                      transition={{ duration: 0.8, ease: "easeInOut" }}
+                    >
+                      <OptimizedImage 
+                        src={image.webp} 
+                        alt={`Project ${index + 1}`}
+                        width={image.width}
+                        height={image.height}
+                        priority={index === 0}
+                        className="w-full h-full object-cover object-top rounded-2xl"
+                      />
+                    </motion.div>
+                  ))}
                 </div>
-              </motion.div>
+              </div>
               
               <div className="flex justify-center mt-4 gap-2">
                 {portfolioImages.map((_, index) => (

@@ -22,7 +22,7 @@ export const metadata = {
     url: 'https://jastutesolutions.co.ke/services/cv-profile-design',
     images: [
       {
-        url: '/assets/webp/personal-branding.png',
+        url: '/assets/webp/Resume Writing.webp',
         alt: 'JASTUTE Solutions - CV & Profile Design'
       }
     ]
@@ -31,7 +31,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'CV & Profile Design | JASTUTE Solutions',
     description: 'Professional CV design, LinkedIn optimization, and personal branding services. Stand out with ATS-friendly CVs and compelling profiles that get you noticed.',
-    images: ['/assets/webp/personal-branding.png']
+    images: ['/assets/webp/Resume Writing.webp']
   },
   alternates: {
     canonical: 'https://jastutesolutions.co.ke/services/cv-profile-design'
