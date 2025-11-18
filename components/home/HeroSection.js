@@ -33,7 +33,7 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <motion.div 
           className="flex justify-start pb-7"
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0.5, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3, duration: 0.5 }}
         >
@@ -46,13 +46,13 @@ export default function HeroSection() {
         <div className="grid lg:grid-cols-5 gap-12 items-center">
           <motion.div 
             className="lg:col-span-3 space-y-8"
-            initial={{ opacity: 0, x: -50 }}
+            initial={{ opacity: 0.8, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
           >
             <motion.h1 
               className="text-4xl md:text-5xl lg:text-6xl font-bold text-[#073737] leading-tight"
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0.8, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2, duration: 0.8 }}
             >
@@ -62,7 +62,7 @@ export default function HeroSection() {
             
             <motion.p 
               className="text-lg text-[#242B29]/80 max-w-2xl"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0.8, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.4, duration: 0.8 }}
             >
@@ -72,7 +72,7 @@ export default function HeroSection() {
             
             <motion.div 
               className="flex flex-col sm:flex-row gap-4"
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0.8, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.8 }}
             >

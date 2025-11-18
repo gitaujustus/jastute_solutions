@@ -12,7 +12,7 @@ const services = [
   { name: 'Web Hosting & Domains', href: '/services/hosting-domains' },
   { name: 'Web Strategy & Consulting', href: '/services/strategy-consulting' },
   { name: 'Branding & Graphic Design', href: '/services/branding-design' },
-  { name: 'CV & Profile Design', href: '#' },
+  { name: 'CV & Profile Design', href: '/services/cv-profile-design' },
 ];
 
 export default function Header() {
@@ -36,21 +36,21 @@ export default function Header() {
       }`}
     >
       {/* Navigation */}
-      <nav className="px-6 py-4">
+      <nav className="px-6 py-2">
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Image 
               src="/assets/jastute-logo.png" 
               alt="JASTUTE Solutions Logo"
               priority={true}
-              width={80}
-              height={48}
+              width={2053}
+              height={740}
               className="h-12 2xl:h-20 w-auto"
             />
           </div>
           
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center space-x-8 xl:space-x-12 text-[16px] md:text-[18px] 2xl:text-[20px]">
+          <div className="hidden md:flex items-center space-x-8 xl:space-x-12 text-[16px]  2xl:text-[18px]">
             <Link href="/" className={`transition-colors ${pathname === '/' ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`}>Home</Link>
             
             {/* Desktop Services Dropdown */}
@@ -60,11 +60,11 @@ export default function Header() {
                 className={`transition-colors flex items-center gap-1 ${pathname.startsWith('/services') ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`}
               >
                 Services
-                <RiArrowDropDownLine className="w-5 h-5 transition-transform group-hover:rotate-180" />
+                <RiArrowDropDownLine className="w-8 h-8 transition-transform group-hover:rotate-180" />
               </Link>
               
               {/* Dropdown Menu */}
-              <div className="absolute left-0 mt-6 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-40">
+              <div className="absolute left-0 mt-4 w-56 bg-white rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-40">
                 <div className="py-2">
                   {services.map((service) => (
                     <Link
@@ -109,12 +109,12 @@ export default function Header() {
         <>
           {/* Dark Backdrop */}
           <div 
-            className="md:hidden fixed inset-0 top-20 bg-black/70 z-40 h-full"
+            className="md:hidden fixed inset-0 top-16 bg-black/70 z-40 h-full"
             onClick={() => setIsMenuOpen(false)}
           />
           
           {/* Mobile Sidebar (slides from right) */}
-          <div className="md:hidden fixed right-0 top-20 bottom-0 w-3/4 max-w-sm bg-white z-50 shadow-lg overflow-y-auto">
+          <div className="md:hidden fixed right-0 top-16 bottom-0 w-3/4 max-w-sm bg-white z-50 shadow-lg overflow-y-auto">
             <div className="px-6 py-8 space-y-2">
               <Link href="/" className={`block py-3 text-[16px] md:text-[18px] 2xl:text-[20px] transition-colors ${pathname === '/' ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`} onClick={() => setIsMenuOpen(false)}>Home</Link>
               
@@ -125,7 +125,7 @@ export default function Header() {
                   className={`w-full text-left py-3 text-[16px] md:text-[18px] 2xl:text-[20px] transition-colors flex items-center justify-between ${pathname.startsWith('/services') ? 'text-[#073737] font-semibold' : 'text-[#242B29] hover:text-[#FCB043]'}`}
                 >
                   Services
-                  <RiArrowDropDownLine className={`w-5 h-5 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
+                  <RiArrowDropDownLine className={`w-8 h-8 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
                 </button>
                 
                 {/* Mobile Services Submenu */}

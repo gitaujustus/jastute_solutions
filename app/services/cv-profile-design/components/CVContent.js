@@ -60,7 +60,7 @@ export default function CVContent() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-lg text-[#242B29] mb-6 leading-relaxed">
-                Recruiters skim CVs in seconds. If yours looks generic, cluttered, outdated, or not optimized for the system they're using, you're done before your experience is even seen.
+                Recruiters skim CVs in seconds. If yours looks generic, cluttered, outdated, or not optimized for the system they&apos;re using, you&apos;re done before your experience is even seen.
               </p>
               <p className="text-lg text-[#242B29] mb-8 font-semibold">Most people lose opportunities because of:</p>
               <div className="space-y-3">
@@ -101,7 +101,7 @@ export default function CVContent() {
           viewport={{ once: true }}
         >
           <h2 className="text-4xl font-bold text-[#063837] mb-8 text-center">ATS vs Europass — And Why We Work With Both</h2>
-          <p className="text-lg text-[#242B29] mb-8 text-center">Most job seekers don't even know the difference, and that's where they mess up.</p>
+          <p className="text-lg text-[#242B29] mb-8 text-center">Most job seekers don&apos;t even know the difference, and that&apos;s where they mess up.</p>
           
           <div className="grid md:grid-cols-2 gap-8">
             <motion.div 
@@ -134,7 +134,7 @@ export default function CVContent() {
                 This one is popular for international roles, especially in Europe. It has a standardized format that employers recognize immediately.
               </p>
               <p className="text-[#242B29] font-semibold">
-                It's structured, formal, and detail-heavy.
+                It&apos;s structured, formal, and detail-heavy.
               </p>
             </motion.div>
           </div>
@@ -203,7 +203,7 @@ export default function CVContent() {
           
           <div className="text-center mt-12">
             <p className="text-xl text-[#063837] font-bold">
-              If your CV doesn't tell your story properly, opportunities slip quietly past you.
+              If your CV doesn&apos;t tell your story properly, opportunities slip quietly past you.
             </p>
           </div>
         </motion.section>

@@ -15,8 +15,8 @@ export default function Footer() {
                 src="/assets/Jastute-logo-for-dark-bg.png" 
                 alt="JASTUTE Solutions Logo" 
                 priority={true}
-                width={120}
-                height={80}
+                width={2053}
+                height={740}
                 className="h-20 xl:h-30 w-auto"
               />
             </div>
