@@ -5,11 +5,11 @@ import toast, { Toaster } from 'react-hot-toast';
 import emailjs from 'emailjs-com';
 
 export default function ContactSection() {
-  const { register, handleSubmit, formState: { errors }, reset } = useForm();
+  const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm();
 
   const onSubmit = async (data) => {
     const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_CONTACT_TEMPLATE_ID;
     const userId = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
 
     const templateParams = {
@@ -31,7 +31,31 @@ export default function ContactSection() {
 
   return (
     <>
-      <Toaster position="top-right" />
+      <Toaster 
+        position="top-right"
+        toastOptions={{
+          success: {
+            style: {
+              background: 'linear-gradient(135deg, #E0F0DF 0%, #ffffff 100%)',
+              color: '#063837',
+              border: '2px solid #FCB043',
+              borderRadius: '12px',
+              padding: '16px',
+              fontWeight: '600'
+            }
+          },
+          error: {
+            style: {
+              background: 'linear-gradient(135deg, #E0F0DF 0%, #ffffff 100%)',
+              color: '#063837',
+              border: '2px solid #ef4444',
+              borderRadius: '12px',
+              padding: '16px',
+              fontWeight: '600'
+            }
+          }
+        }}
+      />
       <section className="py-20 md:px-6">
         <div className="px-8 sm:max-w-[90%] md:max-w-[85%] xl:max-w-[80%] mx-auto ">
           <div className="grid lg:grid-cols-2 gap-12 xl:gap-24">
@@ -116,11 +140,23 @@ export default function ContactSection() {
 
                 <motion.button
                   type="submit"
-                  className="w-full bg-gradient-to-r from-[#063837] to-[#FCB043] text-white py-4 rounded-lg font-semibold hover:shadow-lg transition-shadow"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  disabled={isSubmitting}
+                  className={`w-full py-4 rounded-lg font-semibold transition-shadow flex items-center justify-center gap-2 ${
+                    isSubmitting 
+                      ? 'bg-gray-400 cursor-not-allowed' 
+                      : 'bg-gradient-to-r from-[#063837] to-[#FCB043] text-white hover:shadow-lg'
+                  }`}
+                  whileHover={!isSubmitting ? { scale: 1.02 } : {}}
+                  whileTap={!isSubmitting ? { scale: 0.98 } : {}}
                 >
-                  Send Message
+                  {isSubmitting ? (
+                    <>
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                      Sending...
+                    </>
+                  ) : (
+                    'Send Message'
+                  )}
                 </motion.button>
               </form>
             </motion.div>

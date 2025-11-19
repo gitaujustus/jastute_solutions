@@ -21,7 +21,7 @@ export default function CustomWebSystemsCTA() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button
-              onClick={() => window.location.href = 'mailto:jastutesolutions@gmail.com?subject=Custom Web Systems Project&body=Hello JASTUTE Solutions! I\'m interested in custom web systems development. Can we discuss building a tailored solution for my business operations?'}
+              onClick={() => window.location.href = '/request-a-quote'}
               className="bg-gradient-to-r from-[#FCB043] to-[#FCB043]/80 text-[#063837] px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg transition-shadow flex items-center justify-center"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

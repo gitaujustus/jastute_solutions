@@ -21,7 +21,7 @@ export default function WebsiteRedesignCTA() {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <motion.button
-              onClick={() => window.location.href = 'mailto:jastutesolutions@gmail.com?subject=Website Design & Redesign Project Inquiry&body=Hello JASTUTE Solutions! I\'m interested in starting a website design and redesign project. Can we discuss my requirements?'}
+              onClick={() => window.location.href = '/request-a-quote'}
               className="bg-gradient-to-r from-[#FCB043] to-[#FCB043]/80 text-[#063837] px-8 py-4 rounded-full font-bold text-lg hover:shadow-lg transition-shadow flex items-center justify-center"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
@@ -30,7 +30,7 @@ export default function WebsiteRedesignCTA() {
             </motion.button>
             
             <motion.button
-              onClick={() => window.location.href = '/contacts'}
+              onClick={() => window.location.href = '/request-a-quote'}
               className="border-2 border-[#E0F0DF] text-[#E0F0DF] px-8 py-4 rounded-full font-semibold hover:bg-[#E0F0DF] hover:text-[#063837] transition-colors flex items-center gap-3 justify-center"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}

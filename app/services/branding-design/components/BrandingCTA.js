@@ -36,7 +36,7 @@ export default function BrandingCTA() {
           
           <div className="flex justify-center">
             <button 
-              onClick={() => window.open('mailto:jastutesolutions@gmail.com?subject=Branding%20%26%20Design%20Consultation%20Request&body=Hello%20JASTUTE%20Solutions!%20I\'m%20interested%20in%20your%20branding%20and%20graphic%20design%20services.%20Please%20send%20me%20a%20consultation%20and%20quote.', '_blank')}
+              onClick={() => window.location.href = '/request-a-quote'}
               className="bg-[#FCB043] text-[#063837] px-8 py-4 rounded-full font-semibold hover:bg-[#FCB043]/90 transition-colors text-lg flex items-center gap-2 justify-center"
             >
               Get Your Free Design Consultation

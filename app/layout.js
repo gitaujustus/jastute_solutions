@@ -40,20 +40,12 @@ export const metadata = {
     description: "Leading digital design and development agency in Kenya. We help brands stand out through innovative digital solutions.",
   url: 'https://jastutesolution.vercel.app',
     siteName: 'JASTUTE Solutions',
-    // images: [
-    //   {
-    //   url: '/assets/group-of-newborn-chicks.webp',
-    //     width: 1200,
-    //     height: 630,
-    //     alt: 'JASTUTE Solutions - Attract. Impact. Grow.',
-    //   },
-    // ],
     images: [
       {
-        url: "/assets/group-of-newborn-chicks.webp",
+      url: '/assets/group-of-newborn-chicks.webp',
         width: 1200,
         height: 630,
-        alt: "Kibunja Farm - Day-old chicks and poultry in Kenya",
+        alt: 'JASTUTE Solutions - Attract. Impact. Grow.',
       },
     ],
     locale: 'en_US',

@@ -37,7 +37,7 @@ export default function StrategyCTA() {
           
           <div className="flex justify-center">
             <button 
-              onClick={() => window.open('mailto:jastutesolutions@gmail.com?subject=Free%20Website%20Strategy%20Session%20Request&body=Hello%20JASTUTE%20Solutions!%20I\'m%20interested%20in%20booking%20a%20free%2030-minute%20strategy%20session%20to%20review%20my%20website.%20Please%20let%20me%20know%20your%20availability.', '_blank')}
+              onClick={() => window.location.href = '/request-a-quote'}
               className="bg-[#FCB043] text-[#063837] px-8 py-4 rounded-full font-semibold hover:bg-[#FCB043]/90 transition-colors text-lg flex items-center gap-2 justify-center"
             >
               Schedule Your Free Audit

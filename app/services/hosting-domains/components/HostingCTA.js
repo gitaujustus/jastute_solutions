@@ -36,7 +36,7 @@ export default function HostingCTA() {
           
           <div className="flex justify-center">
             <button 
-              onClick={() => window.open('mailto:jastutesolutions@gmail.com?subject=Hosting%20Special%20Offer%20Request&body=Hello%20JASTUTE%20Solutions!%20I\'m%20interested%20in%20your%20special%20hosting%20offer%20(first%20year%20hosting%20%2B%20.co.ke%20domain%20package).%20Please%20send%20me%20more%20details.', '_blank')}
+              onClick={() => window.location.href = '/request-a-quote'}
               className="bg-[#FCB043] text-[#063837] px-8 py-4 rounded-full font-semibold hover:bg-[#FCB043]/90 transition-colors text-lg flex items-center gap-2 justify-center"
             >
               Request a Free Quote

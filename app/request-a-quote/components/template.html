@@ -1,0 +1,71 @@
+<div style="font-family: system-ui, sans-serif, Arial; font-size: 16px; color: #063837; max-width: 600px; margin: 0; background: linear-gradient(135deg, #E0F0DF 0%, #ffffff 100%); border-radius: 8px; overflow: hidden;">
+  <!-- Header Section -->
+  <div style="background: #063837; padding: 16px 12px; text-align: center;">
+    <a style="text-decoration: none; outline: none;" href="https://jastutesolution.vercel.app" target="_blank">
+      <img 
+        style="height: 48px; vertical-align: middle; filter: brightness(0) invert(1);" 
+        height="48" 
+        src="https://jastutesolution.vercel.app/_next/image?url=%2Fassets%2Fjastute-logo.png&w=3840&q=75" 
+        alt="JASTUTE Solutions Logo" 
+      />
+    </a>
+    <h1 style="color: white; margin: 12px 0 0 0; font-size: 20px; font-weight: bold;">New Quote Request</h1>
+  </div>
+
+  <!-- Content Section -->
+  <div style="padding: 16px 12px;">
+    <div style="background: white; border-radius: 8px; padding: 16px; box-shadow: 0 2px 8px rgba(6, 56, 55, 0.1); border-left: 4px solid #FCB043;">
+      <p style="margin: 0 0 16px 0; font-size: 18px; color: #063837;">
+        <strong>🎯 A new project quote request has been submitted!</strong>
+      </p>
+      
+      <p style="margin: 0 0 24px 0; color: #242B29; line-height: 1.6;">
+        A potential client is interested in your services. Here are the project details:
+      </p>
+
+      <!-- Client Details -->
+      <div style="background: #E0F0DF; border-radius: 6px; padding: 12px; margin: 16px 0;">
+        <h3 style="margin: 0 0 12px 0; color: #063837; font-size: 14px; font-weight: bold; border-bottom: 2px solid #FCB043; padding-bottom: 6px;">👤 Client Information</h3>
+        <div style="display: grid; gap: 8px;">
+          <p style="margin: 0; padding: 6px 0; border-bottom: 1px solid rgba(6, 56, 55, 0.1); font-size: 14px;"><strong style="color: #063837;">Name:</strong> <span style="color: #242B29;">{{name}}</span></p>
+          <p style="margin: 0; padding: 6px 0; border-bottom: 1px solid rgba(6, 56, 55, 0.1); font-size: 14px;"><strong style="color: #063837;">Email:</strong> <span style="color: #242B29;">{{email}}</span></p>
+          <p style="margin: 0; padding: 6px 0; border-bottom: 1px solid rgba(6, 56, 55, 0.1); font-size: 14px;"><strong style="color: #063837;">Phone:</strong> <span style="color: #242B29;">{{phone}}</span></p>
+          <p style="margin: 0; padding: 6px 0; font-size: 14px;"><strong style="color: #063837;">Company:</strong> <span style="color: #242B29;">{{company}}</span></p>
+        </div>
+      </div>
+
+      <!-- Project Details -->
+      <div style="background: white; border: 2px solid #E0F0DF; border-radius: 6px; padding: 12px; margin: 16px 0;">
+        <h3 style="margin: 0 0 12px 0; color: #063837; font-size: 14px; font-weight: bold; border-bottom: 2px solid #FCB043; padding-bottom: 6px;">🚀 Project Requirements</h3>
+        <div style="display: grid; gap: 8px;">
+          <p style="margin: 0; padding: 6px 0; border-bottom: 1px solid rgba(6, 56, 55, 0.1); font-size: 14px;"><strong style="color: #063837;">Service Needed:</strong> <span style="color: #242B29;">{{service}}</span></p>
+          <p style="margin: 0; padding: 6px 0; border-bottom: 1px solid rgba(6, 56, 55, 0.1); font-size: 14px;"><strong style="color: #063837;">Budget Range:</strong> <span style="color: #242B29;">{{budget}}</span></p>
+          <p style="margin: 0; padding: 6px 0; border-bottom: 1px solid rgba(6, 56, 55, 0.1); font-size: 14px;"><strong style="color: #063837;">Timeline:</strong> <span style="color: #242B29;">{{timeline}}</span></p>
+        </div>
+      </div>
+
+      <!-- Project Description -->
+      <div style="background: #FCB043; background: linear-gradient(135deg, #FCB043 0%, rgba(252, 176, 67, 0.1) 100%); border-radius: 6px; padding: 12px; margin: 16px 0;">
+        <h3 style="margin: 0 0 8px 0; color: #063837; font-size: 14px; font-weight: bold;">📋 Project Details</h3>
+        <div style="background: white; border-radius: 4px; padding: 12px; border-left: 3px solid #063837;">
+          <p style="margin: 0; color: #242B29; line-height: 1.5; white-space: pre-wrap; font-size: 14px;">{{projectDetails}}</p>
+        </div>
+      </div>
+
+      <!-- Action Button -->
+      <div style="text-align: center; margin: 20px 0 12px 0;">
+        <a href="mailto:{{email}}" style="background: linear-gradient(135deg, #063837 0%, #FCB043 100%); color: white; padding: 10px 20px; border-radius: 20px; text-decoration: none; font-weight: bold; display: inline-block; box-shadow: 0 2px 8px rgba(6, 56, 55, 0.3); font-size: 14px;">
+          📧 Reply to Client
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div style="background: #063837; padding: 16px 12px; text-align: center;">
+    <p style="margin: 0; color: #E0F0DF; font-size: 12px;">
+      Sent from your website quote form<br />
+      <strong style="color: #FCB043;">JASTUTE Solutions</strong> - Attract. Impact. Grow.
+    </p>
+  </div>
+</div>
