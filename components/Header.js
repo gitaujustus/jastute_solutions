@@ -89,12 +89,12 @@ export default function Header() {
               Portfolio
             </button>
             <Link href="/contacts" className={`transition-colors px-3 py-[5px] rounded-lg ${pathname === '/contacts' ? 'text-[#063837] font-semibold bg-[#F0AA44]/60' : 'text-[#242B29] hover:text-[#FCB043]'}`}>Contact</Link>
-            <button 
-              onClick={() => window.open('mailto:jastutesolutions@gmail.com?subject=Quote%20Request%20-%20JASTUTE%20SOLUTIONS&body=Hello%20JASTUTE%20SOLUTIONS!%20I\'m%20interested%20in%20your%20services%20and%20would%20like%20to%20request%20a%20quote%20for%20my%20project.', '_blank')}
+            <Link 
+              href="/request-a-quote"
               className="bg-linear-to-r from-[#063837] to-[#FCB043] text-white px-6 py-[5px] rounded-full hover:shadow-lg transition-shadow"
             >
               Get a Quote
-            </button>
+            </Link>
           </div>
           
           {/* Mobile Menu Button */}
@@ -165,15 +165,13 @@ export default function Header() {
                 Portfolio
               </button>
               <Link href="/contacts" className={`block py-3 px-3 rounded-lg text-[16px] md:text-[18px] 2xl:text-[20px] transition-colors ${pathname === '/contacts' ? 'text-[#063837] font-semibold bg-[#F0AA44]/60' : 'text-[#242B29] hover:text-[#FCB043]'}`} onClick={() => setIsMenuOpen(false)}>Contact</Link>
-              <button 
-                onClick={() => {
-                  window.open('mailto:jastutesolutions@gmail.com?subject=Quote%20Request%20-%20JASTUTE%20Solutions&body=Hello%20JASTUTE%20Solutions!%20I\'m%20interested%20in%20your%20services%20and%20would%20like%20to%20request%20a%20quote%20for%20my%20project.', '_blank');
-                  setIsMenuOpen(false);
-                }}
-                className="w-full mt-4 bg-linear-to-r from-[#063837] to-[#FCB043] text-white px-6 py-3 rounded-full text-center font-semibold text-[16px] md:text-[18px] 2xl:text-[20px]"
+              <Link 
+                href="/request-a-quote"
+                onClick={() => setIsMenuOpen(false)}
+                className="block w-full mt-4 bg-linear-to-r from-[#063837] to-[#FCB043] text-white px-6 py-3 rounded-full text-center font-semibold text-[16px] md:text-[18px] 2xl:text-[20px]"
               >
                 Get a Quote
-              </button>
+              </Link>
             </div>
           </div>
     </header>
