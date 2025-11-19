@@ -91,7 +91,7 @@ export default function QuoteForm() {
           </h1>
           
           <p className="text-xl text-[#242B29] leading-relaxed max-w-2xl mx-auto">
-            Tell us about your project and we'll provide you with a detailed, personalized quote within 24 hours.
+            Tell us about your project and we&apos;ll provide you with a detailed, personalized quote within 24 hours.
           </p>
         </motion.div>
 
@@ -257,7 +257,7 @@ export default function QuoteForm() {
                 {isSubmitting ? 'Sending...' : 'Send Quote Request'}
               </button>
               <p className="text-sm text-[#242B29] mt-4">
-                We'll respond within 24 hours with a detailed quote
+                We&apos;ll respond within 24 hours with a detailed quote
               </p>
             </div>
           </form>
